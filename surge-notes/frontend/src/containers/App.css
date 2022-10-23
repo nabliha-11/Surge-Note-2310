@@ -1,0 +1,56 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+.App {
+ height: fit-content;
+ width: 20%;
+}
+nav{
+
+width: 10% ;
+align-items: center;
+min-height: 10vh;
+background-color: lightcyan;
+color: navy;
+
+}
+.nav h3
+{
+  align-items: center;
+}
+.nav h4
+{
+  align-items: center;
+}
+.nav-links{
+  width: 70%;
+  align-items: center;
+  list-style: none;
+}
+.nav_mark{
+  padding-bottom: 20px;
+  
+}
+.nav_simple{
+  padding-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+p {
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+Link {
+  text-align: center;
+}
