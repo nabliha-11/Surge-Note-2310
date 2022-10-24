@@ -5,6 +5,7 @@ import rb from '../image/rb2.png';
 import {ImBin} from "react-icons/im"
 import {AiFillFileAdd} from "react-icons/ai"
 import {BiUserVoice} from "react-icons/bi";
+import { RiImageEditLine } from "react-icons/ri";
 
 const Sidebar = ({
   notes,
@@ -21,7 +22,7 @@ const Sidebar = ({
         <img src={logo} className="app-sidebar-logo" alt="" />
         <h1>SURGE</h1>
         <button>
-        <img src={ocr} className="app-sidebar-ocr" alt="" />
+        <RiImageEditLine className="app-sidebar-ocr" alt="" />
           </button>
           <button>
             <BiUserVoice className="app-sidebar-voice" alt="" />          
