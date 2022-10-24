@@ -12,7 +12,7 @@ import Facebook from './containers/Facebook';
 import Google from './containers/Google';
 import Nav from './containers/Nav';
 import Simple from './RichTextEditor/Notes';
-import Markdown from './Markdown/Notes';
+//import Markdown from './Markdown/Notes';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -35,8 +35,8 @@ const App = () => (
                     <Route exact path='/activate/:uid/:token' component={Activate} />
                     <Route exact path='/nav' component={Nav} />
                     <Route exact path='/simple' component={Simple} />
-                    <Route exact path='/markdown' component={Markdown} />
-
+                    {/* <Route exact path='/markdown' component={Markdown} />
+ */}
 
                 </Switch>
             </Layout>

@@ -41,13 +41,13 @@ color: navy;
 
 h1 {
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #000000;
 }
 
 p {
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #000000;
 }
 

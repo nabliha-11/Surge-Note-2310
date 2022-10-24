@@ -4,6 +4,7 @@ import ocr from '../image/ocr.png';
 import rb from '../image/rb2.png';
 import {ImBin} from "react-icons/im"
 import {AiFillFileAdd} from "react-icons/ai"
+import {BiUserVoice} from "react-icons/bi";
 
 const Sidebar = ({
   notes,
@@ -22,6 +23,9 @@ const Sidebar = ({
         <button>
         <img src={ocr} className="app-sidebar-ocr" alt="" />
           </button>
+          <button>
+            <BiUserVoice className="app-sidebar-voice" alt="" />          
+            </button>
       </div>
       <div className="app-sidebar-header">
         <h1>Notes</h1>
