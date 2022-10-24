@@ -12,6 +12,7 @@ import Facebook from './containers/Facebook';
 import Google from './containers/Google';
 import Nav from './containers/Nav';
 import Simple from './RichTextEditor/Notes';
+import VTT from './containers/voicetotext';
 //import Markdown from './Markdown/Notes';
 
 import { Provider } from 'react-redux';
@@ -35,6 +36,7 @@ const App = () => (
                     <Route exact path='/activate/:uid/:token' component={Activate} />
                     <Route exact path='/nav' component={Nav} />
                     <Route exact path='/simple' component={Simple} />
+                    <Route exact path='/vtt' component={VTT} />
                     {/* <Route exact path='/markdown' component={Markdown} />
  */}
 
