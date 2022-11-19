@@ -9,7 +9,7 @@
 body,
 .App {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "sans-serif";
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -209,3 +209,63 @@ textarea {
 .rc-md-navigation{
     Height: 56;   
  }
+
+.input-wrapper {
+  position: absolute;
+}
+
+.input-wrapper label {
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: coral;
+  color: #fff;
+}
+
+.input-wrapper input[type="file"] {
+  position: absolute;
+  left: 26px;
+  top: 6px;
+  z-index: -1;
+  font-size: 15px;
+  color: #1a1a11;
+}
+
+.result {
+  margin-top: 4rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.result .box-image {
+  background: coral;
+  height: 100%;
+  padding: 1rem;
+  margin-bottom: 2em;
+}
+
+.result .box-p {
+  background: #ddd;
+  height: 100%;
+  padding: 1rem;
+  margin-bottom: 2em;
+}
+
+.result img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.result p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .result {
+    grid-template-columns: 1fr 1fr;
+  }
+}

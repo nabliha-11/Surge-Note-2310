@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
+import { useCallback, useEffect, useState } from 'react';
+import { createWorker } from 'tesseract.js';
 import './App.css';
 
 import Home from './containers/Home';
@@ -13,6 +15,7 @@ import Google from './containers/Google';
 import Nav from './containers/Nav';
 import Simple from './RichTextEditor/Notes';
 import VTT from './containers/voicetotext';
+import ITT from './containers/imagetotext';
 //import Markdown from './Markdown/Notes';
 
 import { Provider } from 'react-redux';
@@ -37,6 +40,7 @@ const App = () => (
                     <Route exact path='/nav' component={Nav} />
                     <Route exact path='/simple' component={Simple} />
                     <Route exact path='/vtt' component={VTT} />
+                    <Route exact path='/itt' component={ITT} />
                     {/* <Route exact path='/markdown' component={Markdown} />
  */}
 

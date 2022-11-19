@@ -29,7 +29,7 @@ const Sidebar = ({
       <div className="app-sidebar-head">
         <img src={logo} className="app-sidebar-logo" alt="" />
         <h1>SURGE</h1>
-        <button>
+        <button onClick={()=> history.push("/itt")}>
           <RiImageEditLine className="app-sidebar-ocr" alt="" />
         </button>
         <button onClick={()=> history.push("/vtt")}>
