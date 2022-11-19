@@ -103,6 +103,11 @@ color:darkturquoise;
 {
   font-size: 2rem;
   color:white;
+}
+.app-sidebar-des,.app-sidebar-asc
+{
+  font-size: 2rem;
+  color:darkblue;
 }          
 
 .app-sidebar-dlt

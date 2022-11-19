@@ -30,7 +30,7 @@ function Notes() {
   const onDeleteNote = (noteId) => {
     setNotes(notes.filter(({ id }) => id !== noteId));
   };
-
+   
   const onUpdateNote = (updatedNote) => {
     const updatedNotesArr = notes.map((note) => {
       if (note.id === updatedNote.id) {
@@ -47,6 +47,7 @@ function Notes() {
     return notes.find(({ id }) => id === activeNote);
   };
 
+
   return (
     <div className="App">
       <Sidebar
@@ -55,6 +56,8 @@ function Notes() {
         onDeleteNote={onDeleteNote}
         activeNote={activeNote}
         setActiveNote={setActiveNote}
+        //sortedNotesDesc={sortedNotesDesc}
+        //sortedNotes={sortedNotes}
       />
       <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
     </div>

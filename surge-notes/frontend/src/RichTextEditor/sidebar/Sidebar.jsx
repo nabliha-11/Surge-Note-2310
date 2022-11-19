@@ -7,6 +7,7 @@ import { AiFillFileAdd } from "react-icons/ai"
 import { BiUserVoice } from "react-icons/bi";
 import { RiImageEditLine } from "react-icons/ri";
 import { useHistory } from 'react-router-dom';
+import { HiOutlineSortDescending,HiOutlineSortAscending } from "react-icons/hi";
 
 const Sidebar = ({
   notes,
@@ -15,7 +16,38 @@ const Sidebar = ({
   activeNote,
   setActiveNote,
 }) => {
+ 
+ 
+  //const sortedNotesDesc = notes.sort((a, b) => a.lastModified - b.lastModified);
+
+//  const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
+const [sortstate,setsortstate]= useState(false);
+
+const toggleState=()=>{
+  setsortstate(!sortstate);
+  if(!sortstate){
+    const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
+    } else {
+    const sortedNotes = notes.sort((a, b) => a.lastModified - b.lastModified);
+    } 
+}
+
+/*const Asorting = () => {
+  var sortt =1 ;
+  if(sortt){
   const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
+  } else {
+  const sortedNotes = notes.sort((a, b) => a.lastModified - b.lastModified);
+  }
+}
+const Dsorting = () => {
+  var sortt =0 ;
+  if(sortt){
+  const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
+  } else {
+  const sortedNotes = notes.sort((a, b) => a.lastModified - b.lastModified);
+  }
+}*/
 
   const history = useHistory();
 
@@ -39,12 +71,16 @@ const Sidebar = ({
       </div>
       <div className="app-sidebar-header">
         <h1>Notes</h1>
+        <button onClick={toggleState}>
+          {sortstate ?<HiOutlineSortDescending className="app-sidebar-des" alt=""/> :<HiOutlineSortAscending className="app-sidebar-asc" alt=""/>}
+          </button>
+        
         <button onClick={onAddNote}>
           <AiFillFileAdd className="app-sidebar-add" alt="" />
         </button>
       </div>
       <div className="app-sidebar-notes">
-        {sortedNotes.map(({ id, title, body, lastModified }, i) => (
+        {notes.map(({ id, title, body, lastModified }, i) => (
           <div
             className={`app-sidebar-note ${id === activeNote && "active"}`}
             onClick={() => setActiveNote(id)}
