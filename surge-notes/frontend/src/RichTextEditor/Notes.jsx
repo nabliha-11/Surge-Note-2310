@@ -47,9 +47,10 @@ function Notes() {
     return notes.find(({ id }) => id === activeNote);
   };
 
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className="App">
+    <div className={darkMode?"App-dark":"App-light"}>
       <Sidebar
         notes={notes}
         onAddNote={onAddNote}
@@ -58,9 +59,16 @@ function Notes() {
         setActiveNote={setActiveNote}
         //sortedNotesDesc={sortedNotesDesc}
         //sortedNotes={sortedNotes}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
       />
-      <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
-    </div>
+      <Main 
+      activeNote={getActiveNote()} 
+      onUpdateNote={onUpdateNote} 
+      darkMode={darkMode}
+      setDarkMode={setDarkMode}
+      />
+      </div>
   );
 }
 

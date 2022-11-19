@@ -6,15 +6,41 @@
 
 /* GLOBAL STYLES */
 
-body,
-.App {
+body
+{
+/*color:#343A40;
+background: #343A40;
+background-color:#343A40;*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+width: 100%;
+height: 90vh;
+overflow: hidden;
+font-size: 16px;
+}
+
+.App-light {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   font-size: 16px;
+ /* 
+*/
   background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
+}
+
+.App-dark {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: #1a1919;
+  
+
 }
 
 button {
@@ -31,17 +57,117 @@ button:hover {
   color: navy;
 }
 
-.App {
+.App-light {
   display: flex;
+  background-color: #fff;
+  color: #333;
+ transition: background-color 0.25s ease-in-out;
+
+}
+.App-dark {
+  display: flex;
+  /*background-color: #1a1919;*/ 
+  color: whitesmoke;
+  transition: background-color 0.25s ease-in-out;
+}
+/* SIDEBAR STYLES */
+.side-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-container span {
+  font-size: 2rem ;
+  padding: left 5px, right 5px ; 
+
+}
+.side-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 14px;
 }
 
-/* SIDEBAR STYLES */
+.side-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.side-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.side-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #19a2c1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch-checkbox {
+  padding: 10px;
+}
 
 .app-sidebar {
   width: 25%;
   height: 100vh;
   border-right: 1px solid #ddd;
   
+}
+.app-sidebar-dark {
+  width: 25%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  background-color: black;
 }
 .app-sidebar-logo {
   display: flex;
@@ -55,15 +181,25 @@ button:hover {
 {
 color:darkturquoise;
 }
-.app-sidebar-header {
+
+.app-sidebar-header-light {
  display: flex;  
  justify-content: space-between;
  padding: 25px;
 }
-.app-sidebar-header h1 {
+.app-sidebar-header-light h1 {
   margin: 0;
+  color: black;
  }
-
+ .app-sidebar-header-dark {
+  display: flex;  
+  justify-content: space-between;
+  padding: 25px;
+ }
+ .app-sidebar-header-dark h1 {
+   color: #ccc;
+   margin: 0;
+  }
 
 .app-sidebar-notes {
   height: calc(100vh - 78px);
@@ -152,7 +288,16 @@ color:darkturquoise;
 .app-sidebar-header button{
 padding-right: 20px;
 }
-
+.note-meta-dark{
+  color: #ccc;
+}
+.note-meta-light{
+  color:black;
+}
+.dark-p
+{
+  color:#ddd;
+}
 /* NOTE EDITOR/PREVIEW (MAIN) STYLES */
 
 .app-main {
@@ -180,14 +325,21 @@ height: 70%;
 }
 
 /* Editing */
-.app-main-note-edit {
+.app-main-note-edit-light {
   padding: 25px;
   width: 100%;
   height: 100vh; 
   background-color: #F0F9FF;
 }
+.app-main-note-edit-dark {
+  padding: 25px;
+  width: 100%;
+  height: 100vh; 
+  background-color:#343A40;
+}
 
-.app-main-note-edit input,
+.app-main-note-edit-dark input,
+.app-main-note-edit-light input,
 textarea {
   display: block;
   border: 1px solid #ddd;
@@ -200,7 +352,8 @@ textarea {
   font-family: inherit;
   
 }
-.app-main-note-edit input {
+.app-main-note-edit-dark input,
+.app-main-note-edit-light input {
   height: 50px;
   font-size: 2rem;
 }
@@ -214,3 +367,8 @@ textarea {
 .rc-md-navigation{
     Height: 56;   
  }
+/*voice*/
+
+.Voice{
+  color: #fff;
+}

@@ -7,7 +7,7 @@ import MDEditor from "@uiw/react-md-editor";
 
   
 
-const Main = ({ activeNote, onUpdateNote }) => {
+const Main = ({ activeNote, onUpdateNote,darkMode,setDarkMode }) => {
  
   const editor=useRef(null)
   const [content,SetContent]=useState('')
@@ -24,7 +24,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
 
   return (
      <div className="app-main">
-      <div className="app-main-note-edit">
+      <div className={darkMode?"app-main-note-edit-dark":"app-main-note-edit-light"}>
         <h2>Title</h2>
         <input
           type="text"
@@ -35,7 +35,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
           autoFocus
         />
         <h2>Note</h2>
-        <div className="contents" data-color-mode='light'>       
+        <div className={darkMode?"contents-dark":"contents-ligth"} data-color-mode='light'>       
          <MDEditor
          id="body"
          textareaProps={{

@@ -15,6 +15,8 @@ const Sidebar = ({
   onDeleteNote,
   activeNote,
   setActiveNote,
+  darkMode,
+  setDarkMode,
 }) => {
  
  
@@ -57,10 +59,19 @@ const Dsorting = () => {
   }; */
 
   return (
-    <div className="app-sidebar">
+    <div className={darkMode?"app-sidebar-dark":"app-sidebar"}>
       <div className="app-sidebar-head">
         <img src={logo} className="app-sidebar-logo" alt="" />
-        <h1>SURGE</h1>
+        <div className="side-container">
+        <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
+        <div className="side-switch-checkbox">
+          <label className="side-switch">
+            <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+            <span className="slider round"> </span>
+          </label>
+        </div>
+        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
+      </div>
         <button>
           <RiImageEditLine className="app-sidebar-ocr" alt="" />
         </button>
@@ -69,7 +80,7 @@ const Dsorting = () => {
           {/* <Link to="/yourRoute"></Link> */}
         </button>
       </div>
-      <div className="app-sidebar-header">
+      <div className={darkMode?"app-sidebar-header-dark":"app-sidebar-header-light"}>
         <h1>Notes</h1>
         <button onClick={toggleState}>
           {sortstate ?<HiOutlineSortDescending className="app-sidebar-des" alt=""/> :<HiOutlineSortAscending className="app-sidebar-asc" alt=""/>}
@@ -92,8 +103,8 @@ const Dsorting = () => {
               </button>
             </div>
 
-            <p>{body && body.substr(0, 25) + "..."}</p>
-            <small className="note-meta">
+            <p className={darkMode?'dark-p':'light-p'}>{body && body.substr(0, 25) + "..."}</p>
+            <small className={darkMode?"note-meta-dark":"note-meta-light"}>
               Last Modified{" "}
               {new Date(lastModified).toLocaleDateString("en-GB", {
                 hour: "2-digit",

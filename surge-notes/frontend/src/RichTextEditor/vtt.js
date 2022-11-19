@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './App.css'
+import './App.css';
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <>
-      <h1>Voice Notes</h1>
+      <h1 style={{color:"white"}}>Voice Notes</h1>
       <div className="container">
         <div className="box">
           <h2>Current Note</h2>
