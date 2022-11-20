@@ -36,7 +36,7 @@ const Signup = ({ signup, isAuthenticated }) => {
 
         }
     };
-
+    var passAlert= 'Password must contain\n-1 uppercase\n-1 lowercase\n-1 special character\n-no two adjacent same characters\n-at least 8 characters';
     const continueWithFacebook = async () => {
         try {
             const res = await axios.get(`${process.env.REACT_APP_API_URL}/auth/o/facebook/?redirect_uri=${process.env.REACT_APP_API_URL}/facebook`)
@@ -46,7 +46,7 @@ const Signup = ({ signup, isAuthenticated }) => {
 
         }
     };
-
+   
     if (isAuthenticated) {
         return <Redirect to='/' />
     }
@@ -101,6 +101,7 @@ const Signup = ({ signup, isAuthenticated }) => {
                             name='password'
                             value={password}
                             onChange={e => onChange(e)}
+                            onClick={()=>alert(passAlert)}
                             minLength='8'
                             required
                         />
@@ -112,7 +113,7 @@ const Signup = ({ signup, isAuthenticated }) => {
                             placeholder='Confirm Password*'
                             name='re_password'
                             value={re_password}
-                            onChange={e => onChange(e)}
+                            onChange={e => onChange(e)}                             
                             minLength='8'
                             required
                         />
