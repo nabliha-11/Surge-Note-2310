@@ -372,3 +372,42 @@ textarea {
 .Voice{
   color: #fff;
 }
+
+
+.result {
+  margin-top: 4rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.result .box-image {
+  background: #D7E3F2;
+  height: 100%;
+  padding: 1rem;
+  margin-bottom: 2em;
+}
+
+.result .box-p {
+  background: #D7E3F2;
+  height: 100%;
+  padding: 1rem;
+  margin-bottom: 2em;
+}
+
+.result img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.result p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .result {
+    grid-template-columns: 1fr 1fr;
+  }
+}

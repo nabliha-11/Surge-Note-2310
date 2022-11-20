@@ -54,8 +54,8 @@ function App() {
   }
 
   return (
-    <>
-      <h1>Voice Notes</h1>
+    <div className='VoiceToText'>
+      <h1 className='voice'>Voice Notes</h1>
       <div className="container">
         <div className="box">
           <h2>Current Note</h2>
@@ -75,7 +75,7 @@ function App() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

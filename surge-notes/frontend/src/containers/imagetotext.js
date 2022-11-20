@@ -31,9 +31,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="Imtotxt">
       <div className="input-wrapper">
-        <label htmlFor="upload">Upload Image</label>
+        <label htmlFor="upload"></label>
         <input type="file" id="upload" accept='image/*' onChange={handleChangeImage} />
       </div>
       <br></br><br>

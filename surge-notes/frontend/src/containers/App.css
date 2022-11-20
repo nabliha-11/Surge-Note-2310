@@ -9,7 +9,13 @@
  height: fit-content;
  width: 20%;
  text-align: center;
+ display: flex;
 }
+.Imtotxt {
+height: fit-content;
+text-align: center;
+}
+
 nav{
 
 width: 10% ;
@@ -99,10 +105,11 @@ Link {
 
 .box {
   box-shadow: -4px 10px 35px -1px rgba(0, 0, 0, 0.75);
-  min-height: 20rem;
+  min-height: 15rem;
   margin: 30px;
   padding: 20px;
   border-radius: 5px;
+  background: #D7E3F2;   
 }
 
 button {
@@ -111,4 +118,14 @@ button {
   padding: 10px;
   border-radius: 5px;
   background: transparent;
+}
+
+.voice{
+  color:navy;
+}
+
+.VoiceToText{
+
+  background:white ;
+  height: 100%;
 }
