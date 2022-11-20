@@ -72,7 +72,7 @@ const Dsorting = () => {
         </div>
         <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
       </div>
-        <button>
+        <button onClick={()=> history.push("/itt")}>
           <RiImageEditLine className="app-sidebar-ocr" alt="" />
         </button>
         <button onClick={()=> history.push("/vtt")}>
