@@ -96,10 +96,13 @@ DATABASES = {
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'apikey' #keep this as it is
-EMAIL_HOST_PASSWORD = "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"
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'dev.teamroket@gmail.com'
+EMAIL_HOST_PASSWORD = "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"
+DEFAULT_FROM_EMAIL = 'teamschedulit@gmail.com' 
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
