@@ -30,7 +30,7 @@ const Navbar = ({ logout, isAuthenticated }) => {
     
   
     return (
-        <Fragment >
+        <>
             <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <Link className='navbar-brand' to='/'>Surge</Link>
                  {/* <button 
@@ -54,7 +54,7 @@ const Navbar = ({ logout, isAuthenticated }) => {
                 </div>
             </nav>
             {redirect ? <Redirect to='/' /> : <Fragment></Fragment>}
-        </Fragment>
+        </>
     );
 };
 

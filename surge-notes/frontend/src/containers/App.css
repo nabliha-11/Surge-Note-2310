@@ -14,6 +14,7 @@
 .Imtotxt {
 height: fit-content;
 text-align: center;
+color: white;
 }
 
 nav{
@@ -46,18 +47,44 @@ color: navy;
   padding-top: 10px;
 }
 
-h1 {
+.jumbotron mt-5 h1, .container mt-5 h1,.container mt-1 h1 {
   text-align: center;
   /* text-transform: uppercase; */
   color: #000000;
 }
 
-p {
+.jumbotron mt-5 p{
   text-align: center;
   /* text-transform: uppercase; */
   color: #000000;
 }
-
+.lead
+{
+  text-align: center;
+  /* text-transform: uppercase; */
+  color: #000000; 
+}
+.display-4
+{
+  text-align: center;
+  color: #000000;
+}
+.mt-3
+{
+  text-align: center;
+  color: #000000;
+}
+.h1Display
+{
+  text-align: center;
+  color: #000000;
+}
+.pDisplay
+{
+  
+  text-align: center;
+  color: #000000;
+}
 Link {
   text-align: center;
 }
@@ -109,7 +136,8 @@ Link {
   margin: 30px;
   padding: 20px;
   border-radius: 5px;
-  background: #D7E3F2;   
+  background: #D7E3F2; 
+    
 }
 
 button {
@@ -122,6 +150,7 @@ button {
 
 .voice{
   color:navy;
+  text-align: center;
 }
 
 .VoiceToText{

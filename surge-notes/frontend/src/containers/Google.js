@@ -26,7 +26,7 @@ const Google = ({ googleAuthenticate }) => {
                 <h1 class='display-4'>Welcome to Surge!</h1>
                 <p class='lead'>Team Roket</p>
                 <hr class='my-4' />
-                <p>Click the Log In button</p>
+                <p class='lead'>Click the Log In button</p>
                 <div class="d-flex justify-content-center">
                     <Link class='btn btn-primary btn-lg' to='/login' role='button'>Login</Link>
                 </div>

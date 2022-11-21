@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './App.css'
 const Home = () => (
     <div className='container p-3 my-3 bg-dark text-white'>
         <div class='jumbotron mt-5'>

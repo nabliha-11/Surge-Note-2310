@@ -27,7 +27,7 @@ const ResetPassword = ({ reset_password }) => {
     return (
         <div className='container p-3 my-5 bg-dark text-white'>
             <div className='container mt-5'>
-                <h1>Request Password Reset:</h1>
+                <h1 class='h1Display'>Request Password Reset:</h1>
                 <form onSubmit={e => onSubmit(e)}>
                     <div className='form-group mx-sm-5'>
                         <input

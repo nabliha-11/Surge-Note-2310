@@ -47,8 +47,8 @@ const Login = ({ login, isAuthenticated }) => {
     return (
         <div className='container p-3 my-3 bg-dark text-white'>
             <div className='container mt-5'>
-                <h1>Log In</h1>
-                <p>Log into your Account</p>
+                <h1 class='h1Display'>Log In</h1>
+                <p class='pDisplay'>Log into your Account</p>
                 <form onSubmit={e => onSubmit(e)}>
                     <div className='form-group mx-sm-5 mb-2'>
                         <input
