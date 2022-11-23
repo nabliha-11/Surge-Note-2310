@@ -235,6 +235,7 @@ color:darkturquoise;
 {
   font-size: 2rem;
   color:deepskyblue;
+  margin-right:17px ;
 }
 .app-sidebar-voice
 {
@@ -244,7 +245,7 @@ color:darkturquoise;
 .app-sidebar-des,.app-sidebar-asc
 {
   font-size: 2rem;
-  color:darkblue;
+  color:deepskyblue;
 }          
 
 .app-sidebar-dlt
@@ -300,6 +301,36 @@ padding-right: 20px;
   color:#ddd;
 }
 /* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+.searchbar{
+  margin-left: 10px;
+  margin-bottom: 10px;
+  position: center;
+  padding-left: 20px; 
+}
+.searchbar input{
+
+width: 100%;
+padding-left: 50px;
+size: 200px;
+font-size: 30px;
+
+}
+.sicon{
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 3rem;
+    
+}
+.sinput
+{
+width: 80%;
+ border-radius: 5px; 
+size: 200px;
+font-size: 30px;
+border-color:#2196f3;
+margin-top: 10px;
+margin-left: 10px;
+}
 
 .app-main {
   width: 75%;
