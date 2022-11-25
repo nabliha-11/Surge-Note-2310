@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
+import uuid from "react-uuid";
+import axios from 'axios';
+
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition
@@ -10,6 +13,12 @@ mic.interimResults = true
 mic.lang = 'en-US'
 
 function App() {
+  const config = {
+    headers: {
+      Authorization: "JWT " + localStorage.getItem("access")
+    }
+  };
+  const vttaddpath = "http://127.0.0.1:8000/addvtt";
   const [isListening, setIsListening] = useState(false)
   const [note, setNote] = useState(null)
   const [savedNotes, setSavedNotes] = useState([])
@@ -29,6 +38,8 @@ function App() {
       mic.stop()
       mic.onend = () => {
         console.log('Stopped Mic on Click')
+        console.log(note)
+        console.log(config)
       }
     }
     mic.onstart = () => {
@@ -41,16 +52,31 @@ function App() {
         .map(result => result.transcript)
         .join('')
       console.log(transcript)
-      setNote(transcript)
+      setNote('transcript')
       mic.onerror = event => {
         console.log(event.error)
+
       }
+      console.log(note);
     }
   }
 
   const handleSaveNote = () => {
     setSavedNotes([...savedNotes, note])
+    let vtt = {
+      id: uuid(),
+      body: note
+    };
+    axios
+      .post(vttaddpath, vtt, config)
+      .then((response) => {
+        console.log(response);
+      }
+      );
+
     setNote('')
+    console.log(vtt);
+    console.log(config);
   }
 
   return (
